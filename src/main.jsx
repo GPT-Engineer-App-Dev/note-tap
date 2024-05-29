@@ -3,29 +3,29 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 
-const lightSolarizedTheme = extendTheme({
+const darkMonochromeTheme = extendTheme({
   config: {
-    initialColorMode: "light",
+    initialColorMode: "dark",
     useSystemColorMode: false,
   },
   colors: {
     brand: {
-      50: "#fdf6e3",
-      100: "#eee8d5",
-      200: "#93a1a1",
-      300: "#839496",
-      400: "#657b83",
-      500: "#586e75",
-      600: "#073642",
-      700: "#002b36",
-      800: "#073642",
-      900: "#002b36",
+      50: "#1a1a1a",
+      100: "#333333",
+      200: "#4d4d4d",
+      300: "#666666",
+      400: "#808080",
+      500: "#999999",
+      600: "#b3b3b3",
+      700: "#cccccc",
+      800: "#e6e6e6",
+      900: "#ffffff",
     },
-    background: "#fdf6e3",
-    text: "#657b83",
-    primary: "#268bd2",
-    secondary: "#2aa198",
-    accent: "#b58900",
+    background: "#1a1a1a",
+    text: "#e6e6e6",
+    primary: "#808080",
+    secondary: "#999999",
+    accent: "#b3b3b3",
   },
   styles: {
     global: {
@@ -39,7 +39,7 @@ const lightSolarizedTheme = extendTheme({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ChakraProvider theme={lightSolarizedTheme}>
+    <ChakraProvider theme={darkMonochromeTheme}>
       <App />
     </ChakraProvider>
   </React.StrictMode>
