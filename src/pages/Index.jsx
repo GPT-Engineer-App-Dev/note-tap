@@ -15,29 +15,29 @@ const Index = () => {
   };
 
   return (
-    <Container centerContent maxW="container.md" py={10} bg="brand.50" color="brand.900">
+    <Container centerContent maxW="container.md" py={10} bg="solarizedLight.bg" color="solarizedLight.text">
       <VStack spacing={4} width="100%">
         <Heading as="h1" size="xl">Note Taking App</Heading>
         <Input 
           placeholder="Note Title" 
           value={title} 
           onChange={(e) => setTitle(e.target.value)} 
-          bg="brand.100" 
-          color="brand.900" 
-          _placeholder={{ color: "brand.300" }}
+          bg="solarizedLight.inputBg" 
+          color="solarizedLight.inputText" 
+          _placeholder={{ color: "solarizedLight.placeholder" }}
         />
         <Textarea 
           placeholder="Note Content" 
           value={content} 
           onChange={(e) => setContent(e.target.value)} 
-          bg="brand.100" 
-          color="brand.900" 
-          _placeholder={{ color: "brand.300" }}
+          bg="solarizedLight.inputBg" 
+          color="solarizedLight.inputText" 
+          _placeholder={{ color: "solarizedLight.placeholder" }}
         />
-        <Button bg="primary" color="brand.50" onClick={handleAddNote}>Add Note</Button>
+        <Button bg="primary" color="solarizedLight.buttonText" onClick={handleAddNote}>Add Note</Button>
         <Box width="100%" mt={10}>
           {notes.map((note, index) => (
-            <Box key={index} p={5} shadow="md" borderWidth="1px" borderRadius="md" mb={4} bg="brand.200" color="brand.900">
+            <Box key={index} p={5} shadow="md" borderWidth="1px" borderRadius="md" mb={4} bg="solarizedLight.noteBg" color="solarizedLight.noteText">
               <Heading as="h3" size="md">{note.title}</Heading>
               <Text mt={2}>{note.content}</Text>
             </Box>
